@@ -1,5 +1,9 @@
 # Info
 
+Stuff About Me.
+
+# Bio
+
 Hey! My name is Sam and i go by she/her pronouns. I'm a big fan of all things horror and i'm a game development/coding enthusiast.
 
 # Experience

@@ -1,4 +1,5 @@
 # Links
+Most of my sites are here.
 
 # Socials
 [![img](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UC-ke4Dsi2jbt8tOe9lIE7GQ)
