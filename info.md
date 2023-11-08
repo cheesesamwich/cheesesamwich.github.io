@@ -1,4 +1,3 @@
-# Info
 
 Stuff About Me.
 
