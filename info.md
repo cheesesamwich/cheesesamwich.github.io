@@ -11,4 +11,4 @@ Currently i have experience in the following languages and softwares:
 [![img](https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white)](https://github.com/cheesesamwich?tab=repositories)
 [![img](https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white)](https://github.com/cheesesamwich?tab=repositories)
 
-Im always learning though, so it might not be up to date and theres probably alot of shit too small to mention.
+I'm always learning, so this will probably get updated quite alot.
