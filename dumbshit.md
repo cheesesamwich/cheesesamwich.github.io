@@ -1,2 +1,2 @@
 # Dumb Shit
-Rat Spin - https://ratspin.uk
+[Rat Spin](https://ratspin.uk)
