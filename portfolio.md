@@ -1,6 +1,6 @@
 # Portfolio
 
-Im fluent in the following languages and softwares, some more than others but i have atleast a semi advanced level of understanding for all of them.
+im somewhat fluent in all this, but im fucking stupid so dont count on it
 
 [![img](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)](https://github.com/cheesesamwich?tab=repositories)
 [![img](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://github.com/cheesesamwich?tab=repositories)
