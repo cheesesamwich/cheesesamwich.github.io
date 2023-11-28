@@ -20,11 +20,11 @@ body
     text-align: center;
     background-color: var(--menucolor);
     border-radius: 50px;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 20vw;
+    margin-right: 20vw;
     padding-top: 1;
-    padding-bottom: 2%;
-    margin-top: 25px;
+    padding-bottom: 2vw;
+    margin-top: 2vw;
     
     
 }
