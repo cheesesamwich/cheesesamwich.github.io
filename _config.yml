@@ -3,7 +3,6 @@ minima:
     skin: dark
 title: Samwich
 header_pages:
-    - info.md
-    - links.md
+    - socials.md
     - portfolio.md
-    - dumbshit.md
+    - dev.md
