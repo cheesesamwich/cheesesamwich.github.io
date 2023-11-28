@@ -4,6 +4,7 @@ body
     color: #b8b8b8;
     font-family: 'Inter';
     margin: 0px;
+    zoom: 120%;
 }
 
 #content
@@ -12,8 +13,8 @@ body
     text-align: center;
     background-color: #151a26;
     border-radius: 50px;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 20%;
+    margin-right: 20%;
     padding-top: 1;
     padding-bottom: 2%;
     margin-top: 25px;
