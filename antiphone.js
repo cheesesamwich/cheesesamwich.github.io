@@ -1,7 +1,7 @@
 const isMobile = navigator.userAgentData.mobile; //resolves true/false
+console.log(isMobile);
 if(isMobile)
-{
-    console.log("device is mobile");
+ {
     window.location.href = '/nophone.html'
 }
 else
