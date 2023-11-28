@@ -1,7 +1,14 @@
+:root
+{
+    --bgcolor: #2d233f;
+    --textcolor: #6f6f82;
+    --menucolor: #1d1029;
+    --italiccolor: #55496c;
+}
 body
 {
-    background-color: #232D3F;
-    color: #b8b8b8;
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
     font-family: 'Inter';
     margin: 0px;
     zoom: 120%;
@@ -11,7 +18,7 @@ body
 {
     font-size: 150%;
     text-align: center;
-    background-color: #151a26;
+    background-color: var(--menucolor);
     border-radius: 50px;
     margin-left: 20%;
     margin-right: 20%;
@@ -52,25 +59,25 @@ a
 
 #buttonbar {
     display: inline-block;
-    background-color: #10141d;
+    background-color: var(--menucolor);
     margin-top: 25px;
     border-radius: 35px;
     padding-right: 20px;
     padding-left: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
-    fill: #b8b8b8;
+    fill: var(--textcolor);
 }
 
 a svg {
-    fill: #b8b8b8;
+    fill: var(--textcolor);
     padding-left: 2px;
     padding-right: 2px;
   }
   
 a p
 {
-        color: #b8b8b8;
+        color: var(--textcolor);
 }
 
  h2, h3, h4, h5
@@ -84,3 +91,8 @@ a p
 
 }
 
+#italicnote
+{
+    text-align: center;
+    color: var(--italiccolor);
+}
