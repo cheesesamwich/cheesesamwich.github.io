@@ -12,8 +12,8 @@ body
     text-align: center;
     background-color: #151a26;
     border-radius: 50px;
-    margin-left: 540px;
-    margin-right: 540px;
+    margin-left: 300px;
+    margin-right: 300px;
     padding-top: 1;
     padding-bottom: 25px;
     margin-top: 25px;
@@ -21,6 +21,21 @@ body
     padding-left: 25px;
     margin-bottom: 25px;
     
+}
+#phonecontent
+{
+    font-size: 25px;
+    text-align: center;
+    background-color: #151a26;
+    border-radius: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 1;
+    padding-bottom: 25px;
+    margin-top: 25px;
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-bottom: 25px;
 }
 a
 {
