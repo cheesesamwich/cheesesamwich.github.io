@@ -1,4 +1,4 @@
-# Dumb Shit
+# Dev
 Here you'll find all of the things ive made. You'll also find places that you can find things that ive made. Its all over the place, alright
 # Sites
 [Rat Spin](https://ratspin.uk) - this is literally just a site with a spinning rat idk why you would want this at all
