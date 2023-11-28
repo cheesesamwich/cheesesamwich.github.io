@@ -8,35 +8,19 @@ body
 
 #content
 {
-    font-size: 25px;
+    font-size: 150%;
     text-align: center;
     background-color: #151a26;
     border-radius: 50px;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 25%;
+    margin-right: 25%;
     padding-top: 1;
-    padding-bottom: 25px;
+    padding-bottom: 2%;
     margin-top: 25px;
-    padding-right: 25px;
-    padding-left: 25px;
-    margin-bottom: 25px;
+    
     
 }
-#phonecontent
-{
-    font-size: 25px;
-    text-align: center;
-    background-color: #151a26;
-    border-radius: 50px;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-top: 1;
-    padding-bottom: 25px;
-    margin-top: 25px;
-    padding-right: 25px;
-    padding-left: 25px;
-    margin-bottom: 25px;
-}
+
 a
 {
     text-decoration: none;
