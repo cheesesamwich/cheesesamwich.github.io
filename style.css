@@ -42,6 +42,8 @@ a
 
 #navmenu {
     margin-top: 25px;
+    
+    
     display: block;
     text-align: center; /* center */
     margin-left: auto;
@@ -52,8 +54,11 @@ a
     display: inline-block;
     background-color: #10141d;
     margin-top: 25px;
-    border-radius: 50px;
-    padding: 15px;
+    border-radius: 35px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     fill: #b8b8b8;
 }
 
