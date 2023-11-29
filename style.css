@@ -11,23 +11,31 @@ body
     color: var(--textcolor);
     font-family: 'Inter';
     margin: 0px;
-    zoom: 120%;
+    zoom: 100%;
 }
 
-#content
-{
+#content {
     font-size: 150%;
     text-align: center;
     background-color: var(--menucolor);
     border-radius: 50px;
-    margin-left: 20vw;
-    margin-right: 20vw;
-    padding-top: 1;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    padding-top: 1vh;
     padding-bottom: 2vw;
-    margin-top: 2vw;
-    
-    
+    margin-top: 1vw;
+
 }
+
+
+@media (max-width: 1650px) {
+    #content {
+        padding-bottom: 75px;
+
+    }
+}
+
+
 
 a
 {
