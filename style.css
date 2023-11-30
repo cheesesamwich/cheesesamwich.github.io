@@ -4,6 +4,7 @@
     --textcolor: #6f6f82;
     --menucolor: #1d1029;
     --italiccolor: #55496c;
+    --hyperlinkcolor: #9d9dc7;
 }
 body
 {
@@ -40,8 +41,7 @@ body
 a
 {
     text-decoration: none;
-    color: initial;
-    fill: initial;
+    color: var(--hyperlinkcolor);
 }
 #pfp
 {
