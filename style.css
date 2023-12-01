@@ -1,9 +1,11 @@
 :root
 {
     --bgcolor: #2d233f;
-    --textcolor: #6f6f82;
+    --bgcolor2: #2d233f;
+    --textcolor: #7e7e8e;
+    --elementglow: #a4a4b5;
     --menucolor: #1d1029;
-    --italiccolor: #55496c;
+    --italiccolor: #6c5e86;
     --hyperlinkcolor: #9d9dc7;
 }
 body
@@ -13,7 +15,9 @@ body
     font-family: 'Inter';
     margin: 0px;
     zoom: 100%;
+    filter: drop-shadow(6px 6px 5px rgb(0 0 0 / 0.4));
 }
+
 
 #content {
     font-size: 150%;
@@ -77,11 +81,19 @@ a
     fill: var(--textcolor);
 }
 
+
 a svg {
     fill: var(--textcolor);
     padding-left: 2px;
     padding-right: 2px;
+    transition: all 0.1s ease-in-out;
+
   }
+a svg:hover
+{
+    fill: var(--elementglow);
+    filter: drop-shadow(0px 0px 5px var(--elementglow));
+}
   
 a p
 {
