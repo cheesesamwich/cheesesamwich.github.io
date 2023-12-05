@@ -1,13 +1,17 @@
 :root
 {
-    --bgcolor: #2d233f;
-    --bgcolor2: #2d233f;
-    --textcolor: #7e7e8e;
-    --elementglow: #a4a4b5;
-    --menucolor: #1d1029;
-    --italiccolor: #6c5e86;
-    --hyperlinkcolor: #9d9dc7;
+    --bgcolor: #580c0c;
+    --textcolor: #e0b0b0;
+    --elementglow: #ddaaaa;
+    --menucolor: #860d0f;  
+    --italiccolor: #dc2626;
+    --hyperlinkcolor: #ee1818; 
 }
+
+
+
+
+
 body
 {
     background-color: var(--bgcolor);
@@ -46,6 +50,7 @@ a
 {
     text-decoration: none;
     color: var(--hyperlinkcolor);
+    
 }
 #pfp
 {
@@ -116,4 +121,5 @@ a p
 {
     text-align: center;
     color: var(--italiccolor);
+
 }
