@@ -1,8 +1,0 @@
-theme: minima
-minima:
-    skin: dark
-title: Samwich
-header_pages:
-    - socials.md
-    - portfolio.md
-    - dev.md
