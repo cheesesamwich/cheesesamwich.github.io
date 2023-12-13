@@ -1,11 +1,11 @@
 :root
 {
-    --bgcolor: #580c0c;
-    --textcolor: #e0b0b0;
-    --elementglow: #ddaaaa;
-    --menucolor: #860d0f;  
-    --italiccolor: #dc2626;
-    --hyperlinkcolor: #ee1818; 
+    --bgcolor: #2a003d;
+    --textcolor: #bcb9b9;
+    --elementglow: #ffffff;
+    --menucolor: rgb(51, 0, 76);  
+    --italiccolor: #76627f;
+    --hyperlinkcolor: #8e5fa6; 
 }
 
 
