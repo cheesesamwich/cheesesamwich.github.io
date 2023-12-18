@@ -1,24 +1,31 @@
 :root
 {
-    --bgcolor: #2a003d;
-    --textcolor: #bcb9b9;
+    --bgcolor: #1f2b2e;
+    --textcolor: #D9DBD7;
     --elementglow: #ffffff;
-    --menucolor: rgb(51, 0, 76);  
-    --italiccolor: #76627f;
-    --hyperlinkcolor: #8e5fa6; 
+    --menucolor: #10282b;  
+    --italiccolor: #fafafa;
+    --hyperlinkcolor: #3ecae6; 
 }
 
+html
+{
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
 
 .shieldsicon
 {
     height: 35px;
     border-radius: 20px;
+    filter: brightness(0.81) contrast(1.25) saturate(1.2);
 }
 
 
 body
 {
-    background-color: var(--bgcolor);
+    background: linear-gradient(#0d1721, #020405);
     color: var(--textcolor);
     font-family: 'Inter';
     margin: 0px;
