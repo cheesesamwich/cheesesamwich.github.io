@@ -1,12 +1,12 @@
-:root
-{
-    --bgcolor: #1f2b2e;
-    --textcolor: #D9DBD7;
-    --elementglow: #ffffff;
-    --menucolor: #10282b;  
-    --italiccolor: #fafafa;
+:root {
+    --bgcolor: #cb919f;
+    --textcolor: #131313;
+    --elementglow: #d7d0d0;
+    --menucolor: #d19fab; /* Adjusted menu color for better contrast */
+    --italiccolor: #151212;
     --hyperlinkcolor: #3ecae6; 
 }
+
 
 html
 {
@@ -25,7 +25,7 @@ html
 
 body
 {
-    background: linear-gradient(#0d1721, #020405);
+    background-color: var(--bgcolor);
     color: var(--textcolor);
     font-family: 'Inter';
     margin: 0px;
