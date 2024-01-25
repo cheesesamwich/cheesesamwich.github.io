@@ -1,7 +1,7 @@
 {
   "name": "sam-site",
   "version": "0.1.0",
-  https://cheesesamwich.github.io/
+  "homepage": "https://cheesesamwich.github.io/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
