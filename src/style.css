@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@300&family=M+PLUS+Rounded+1c&display=swap);
+
 :root {
     --bgcolor: #cb919f;
     --textcolor: #131313;
@@ -55,9 +57,12 @@ body
     }
 }
 
+h1
+{
+    margin-top: 10px;
+}
 
-
-a
+a, button
 {
     text-decoration: none;
     color: var(--hyperlinkcolor);
@@ -98,25 +103,30 @@ a
 }
 
 
-a svg {
+a svg, button svg {
     fill: var(--textcolor);
     padding-left: 2px;
     padding-right: 2px;
     transition: all 0.1s ease-in-out;
 
   }
-a svg:hover
+a svg:hover, button svg:hover
 {
     fill: var(--elementglow);
     filter: drop-shadow(0px 0px 5px var(--elementglow));
     transform: scale(1.1);
 }
   
-a p
+a p, button p
 {
         color: var(--textcolor);
 }
 
+button
+{
+    background: transparent !important;
+    border: transparent !important;
+}
  h2, h3, h4, h5
 {
     margin: 10px;
