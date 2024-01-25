@@ -144,3 +144,12 @@ button
     color: var(--italiccolor);
 
 }
+
+body
+{
+    padding-bottom: 2%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
