@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css'; 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     <div>
       <div id="navmenu">
         <img id="pfp" src="favicon.png" alt="" draggable="false" />
-        <ButtonBar changePage={changePage} />
+        <ButtonBar changePage={changePage} /> 
       </div>
       <div id="content" style={{ paddingLeft: '2%', paddingRight: '2%' }}>
         <MainAppContent page={currentPage} />
@@ -52,7 +52,7 @@ function MainAppContent(props) {
       <div id='mainAppContent'>
         <h1>Home</h1>
         <p>
-          Hi! I'm Sam (INTP-T), I go by <i>check my discord pronouns i cba to keep updating my pronouns on here</i> and I enjoy messing about with game, web, software development, modding, and sometimes music.
+          Hi! I'm Sam (INTP-T), I enjoy messing about with game, web, software development, modding, and sometimes music.
           If you want to talk to me or look at my socials then you can check the socials tab, and if you wanna see stuff I've done/can do then you can check the other tabs. Feel free to message me on Discord about literally anything if you wanna talk :P
         </p>
       </div>
@@ -85,7 +85,6 @@ function MainAppContent(props) {
     return (
       <div id='mainAppContent'>
         <h3>High Experience</h3>
-        <h1> uhhh something here test (sam dont forget to remove this)</h1>
           <ShieldsTile shieldslink="https://img.shields.io/badge/CSHARP-28046c?style=for-the-badge&logo=csharp&logoColor=white" />
           <ShieldsTile shieldslink="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white" />
           <ShieldsTile shieldslink="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" />
