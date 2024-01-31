@@ -94,6 +94,7 @@ function MainAppContent(props) {
           <ShieldsTile link="https://open.spotify.com/user/1c4rsd0w05thao0gsc5vqrq72?si=4e8582a98b4c433f" shieldslink="https://img.shields.io/badge/Spotify-1ED760?&style=for-the-badge&logo=spotify&logoColor=white" />
           <ShieldsTile link="https://discordapp.com/users/976176454511509554" shieldslink="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
           <ShieldsTile link="https://discord.gg/Fnnw4Spf9P" shieldslink="https://img.shields.io/badge/My Emoji Server-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
+          <ShieldsTile link="https://www.tiktok.com/@literallykirbeye" shieldslink="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white" />
         </div>
       );
     case "skills":
@@ -124,7 +125,10 @@ function MainAppContent(props) {
     case "blog":
       return (
         <div id='mainAppContent'>
-  
+          <BlogPost
+            postName='Deploying Fixed (and TikTok!)'
+            postContent='So since i swapped the site over to react from just standard html, it kept defaulting to the default github domain whenever i deployed, and i had to manually set it again in the github pages config but i fixed it! i had to add the cname file to the github pages branch, not just the main branch :3 //br//brAlso, i have a tiktok now! (again) so im gonna start posting develpoment updates and any other random shit on there'
+          ></BlogPost>
           <BlogPost 
             imageLink='https://media.discordapp.net/attachments/1192200349809918082/1200441946234179584/image.png'
             postName='Music Tab 2: Electric Boogaloo' 
@@ -133,14 +137,14 @@ function MainAppContent(props) {
   
           <BlogPost 
             postName='Music Tab' 
-            postContent='I was working on a music feature which showed my recently listened songs and most listened songs through the last fm api but i had some trouble with hiding the api key in github secrets. If you wanna help me out w this and you know anything about gh pages/nodejs hmu on discord (please i am dying 🙏)brThe feature is all done and ready, i just need to figure out the api key shit'>
+            postContent='I was working on a music feature which showed my recently listened songs and most listened songs through the last fm api but i had some trouble with hiding the api key in github secrets. If you wanna help me out w this and you know anything about gh pages/nodejs hmu on discord (please i am dying 🙏)//brThe feature is all done and ready, i just need to figure out the api key shit'>
           </BlogPost>
-  
           <BlogPost 
-          imageLink='https://media.discordapp.net/attachments/1192200349809918082/1200442800228016148/F32iukrX0AA9bdH.png'
+            imageLink='https://media.discordapp.net/attachments/1192200349809918082/1200442800228016148/F32iukrX0AA9bdH.png'
             postName='Blog Feature' 
-            postContent='Yeah, uh, theres a blog now.brIm gonna post updates about the site and new features here, so stay tuned.'>
+            postContent='Yeah, uh, theres a blog now.//brIm gonna post updates about the site and new features here, so stay tuned.'>
           </BlogPost>
+
           
         </div>
       )
@@ -172,7 +176,7 @@ function BlogPost(props) {
   };
 
   let lines = [];
-  let linesText = props.postContent.split('br');
+  let linesText = props.postContent.split('//br');
   linesText.forEach(element => {
     lines.push(
       <span>{element}<br></br></span>
