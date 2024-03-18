@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --bgCol: #4a3d84;
+    --cardCol: #403479;
+    --borderCol: #7469aa;
+    --textCol: #fdf5ed;
+    --buttonCol: #594d9a;
+    --italicCol: #b9a8ff;
+    --placeholderCol: #e0e0e0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bgCol);
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar
+{
+    display: none !important;
+
+}
+header {
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--textCol);
+}
+
+h1, h2, h3, h4, h5, p, span
+{
+    color: var(--textCol); 
+}
+
+header h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#subHeader
+{
+    margin-top: 5px;
+    margin-bottom: 100px;
+}
+.script-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.script-tile {
+    background-color: var(--cardCol);
+    color: var(--textCol);
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px); 
+    max-width: 400px; 
+    position: relative; /* Ensure relative positioning */
+    padding-bottom: 45px;
+}
+
+img
+{
+    max-width: 100%;
+    border-radius: 5%;
+}
+.script-tile h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.script-tile p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute; /* Position buttons absolutely */
+    bottom: 10px; /* Adjust this value as needed for spacing */
+    right: 10px; /* Adjust this value as needed for spacing */
+}
+
+.rounded-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--buttonCol);
+    text-decoration: none; 
+    color: white;
+    margin-left: 10px;
+}
+
+.rounded-button {
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--buttonCol);
+    text-decoration: none; 
+    color: white; 
+    margin-left: auto; /* Push buttons to the right */
+    margin-top: auto; /* Align buttons to the bottom */
+}
+
+#linkIcon {
+    scale: 0.75;
+    padding: 5px;
+}
+
+
+#buttonIcon {
+    padding: 5px;
+    cursor: pointer;
+}
+
+#script-tile-header
+{
+    margin: 0px;
+}
+
+
+#scriptInfo
+{
+    margin: auto;
+    width: 40%;
+    border: 2px solid var(--borderCol);
+    padding: 25px;
+    text-align:center;
+    background-color: var(--cardCol);
+    border-radius: 45px;
+    margin-bottom: 50px;
+    font-size: 17px;
+}
+
+i
+{
+    color: var(--italicCol);
+}
+
+
+.backButton
+{
+    position: absolute;
+    left: 0;
+    margin: 15px;
+    top: 0;
+}
+
+#infoHeader
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.discordButton
+{
+    position: fixed;
+    margin: 15px;
+    bottom: 0;
+    right: 0;
+    width: 64px;
+    height: 64px;
+}
+
+.buttonAnim
+{
+    transition: transform 0.2s ease;
+    transition: filter 0.2s ease; 
+}
+
+.buttonAnim:hover
+{
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+#searchBar
+{
+    border-radius: 20px;
+    background-color: var(--cardCol);
+    border: none;
+    height: 5vh;
+    width: 100%;
+    margin-bottom: 10px;
+    color: var(--textCol);
+    font-family: 'Poppins';
+    font-size: 20px;
+    padding-left: 25px;
+    box-sizing: border-box;
+    outline: none !important;
+}
+
+#searchBar::placeholder
+{
+    color: var(--placeholderCol);
+}
+#inputWrapper 
+{
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+}
+
+body
+{
+    user-select: none;
+}
+
+#tutSwitch {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--cardCol);
+    margin: auto;
+    width: 22.5%;
+    padding: 5px;
+    border-radius: 25px;
+    color: white;
+    overflow: hidden;
+}
+
+.btn {
+    cursor: pointer;
+    flex-grow: 1;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.1s ease;
+    border-radius: 15px;
+    margin: 2.5px;
+}
+
+#scriptButton:checked ~ .btn:nth-of-type(1),
+#tutButton:checked ~ .btn:nth-of-type(2) {
+    background-color: var(--buttonCol);
+
+}
+
+
+#scriptButton,
+#tutButton {
+    position: absolute;
+    left: -9999px;
+}
