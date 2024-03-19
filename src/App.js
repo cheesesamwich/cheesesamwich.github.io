@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { getScripts, getTuts } from './ContentData';
+import { Helmet } from 'react-helmet';
 import './style.css';
 
 const scripts = getScripts();
@@ -40,13 +41,13 @@ function App() {
             </a>  
           </>
         }
-        {!infoPage && <><h1>SamSam Scripts</h1> <h3 id='subHeader'>The best place for all of your fan game needs</h3></>} 
+        {!infoPage && <><h1>SamSam</h1> <h3 id='subHeader'>The best place for all of your fan game needs</h3></>} 
         {infoPage &&  <h1 id='infoHeader'>{infoPage} instructions</h1>}
       </header>
       {!infoPage && 
         <>
             <div id='tutSwitch'>
-              <input type="radio" id="scriptButton" name="switch" checked/>
+              <input type="radio" id="scriptButton" name="switch" defaultChecked={true}/>
               <label className="btn" htmlFor="scriptButton" onClick={() => handleSwitch("scriptButton")}>Scripts</label>
               <input type="radio" id="tutButton" name="switch"/>
               <label className="btn" htmlFor="tutButton" onClick={() => handleSwitch("tutButton")}>Tutorials</label>
@@ -55,8 +56,7 @@ function App() {
               <input id='searchBar' placeholder='Search for a script!' onChange={(e) => setSearchTerm(e.target.value)}></input>
             </div>
             <div className="script-tiles">
-                {isScriptSearch && <ScriptTiles searchTerm={searchTerm} videos={scripts} download={true}/>}
-                {!isScriptSearch && <ScriptTiles searchTerm={searchTerm} videos={tuts}/>}
+                <ScriptTiles searchTerm={searchTerm} videos={isScriptSearch ? scripts : tuts} download={isScriptSearch}/>
             </div>
         </>
       }
@@ -77,6 +77,13 @@ function ScriptInfo(props) {
   if (infoElement) {
     return (
       <div>
+        <Helmet>
+        <meta
+          name="description"
+          content={infoElement.description}
+        />
+        <title>SamSam | {infoElement.name}</title>
+        </Helmet>
         <div>
           {infoElement.tutorial}
         </div>
