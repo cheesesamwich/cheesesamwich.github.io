@@ -190,7 +190,7 @@ i
 
 #searchBar
 {
-    border-radius: 20px;
+    border-radius: 1000px;
     background-color: var(--cardCol);
     border: none;
     height: 5vh;
@@ -227,7 +227,7 @@ body
     margin: auto;
     width: 22.5%;
     padding: 5px;
-    border-radius: 25px;
+    border-radius: 100px;
     color: white;
     overflow: hidden;
 }
@@ -238,7 +238,7 @@ body
     padding: 10px;
     text-align: center;
     transition: background-color 0.1s ease;
-    border-radius: 15px;
+    border-radius: 100px;
     margin: 2.5px;
 }
 
