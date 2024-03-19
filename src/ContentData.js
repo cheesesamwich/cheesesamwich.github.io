@@ -3,7 +3,7 @@ export function getScripts()
   return(
     [
       { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
-        name: "HitSounds", 
+        name: "Hit Sounds", 
         description: "Group materials and audio clips to create hit sounds",
         tutorial: 
         <>
@@ -22,7 +22,7 @@ export function getScripts()
         </>
       },
       { url: "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/SpeedZone.cs", 
-        name: "SpeedZone", 
+        name: "Speed Zone", 
         description: "Make an object that changes the speed of the player when you walk into it",
         tutorial: 
         <>
@@ -44,8 +44,8 @@ export function getTuts()
   return(
     [
       { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
-        name: "ReflectionProbes", 
-        id: "reflectionprobe",
+        name: "Reflection Probes", 
+        id: "reflection",
         description: "How to create and use reflection probes",
         tutorial: 
         <>
@@ -176,7 +176,7 @@ export function getTuts()
       </>
     },
     { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
-      name: "Audio Reverb Zones", 
+      name: "Audio Reverb Zone", 
       id: "reverb",
       description: "How to create and use audio reverb zones",
       tutorial: 
