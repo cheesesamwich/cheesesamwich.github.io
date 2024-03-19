@@ -4,6 +4,7 @@ export function getScripts()
     [
       { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
         name: "Hit Sounds", 
+        id: "hitsounds",
         description: "Group materials and audio clips to create hit sounds",
         tutorial: 
         <>
@@ -23,6 +24,7 @@ export function getScripts()
       },
       { url: "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/SpeedZone.cs", 
         name: "Speed Zone", 
+        id: "speed",
         description: "Make an object that changes the speed of the player when you walk into it",
         tutorial: 
         <>
