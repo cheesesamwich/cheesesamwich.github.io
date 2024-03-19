@@ -6,6 +6,10 @@ import './style.css';
 const scripts = getScripts();
 const tuts = getTuts();
 
+function getElementFromName(name)
+{
+  return scripts.concat(tuts).find(video => video.name === name);
+}
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -32,10 +36,10 @@ function App() {
   return (
     <div className="container">
       <Helmet>
-        <title>SamSam</title>
+        <title>SamSam{infoPage != null ? ` - ${getElementFromName(infoPage).name}` : ""}</title>
         <meta
           name="description"
-          content={infoPage != null ? infoPage : "The best place for all of your fan game needs"}
+          content={infoPage != null ? getElementFromName(infoPage).description : "The best place for all of your fan game needs"}
         />
       </Helmet>
       <header className="header">
@@ -79,7 +83,7 @@ function App() {
 
 function ScriptInfo(props) {
   let infoElement;
-  infoElement = scripts.concat(tuts).find(video => video.name === props.scriptName);
+  infoElement = getElementFromName(props.scriptName);
   
   if (infoElement) {
     return (

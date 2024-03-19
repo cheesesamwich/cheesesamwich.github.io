@@ -4,7 +4,7 @@ export function getScripts()
     [
       { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
         name: "HitSounds", 
-        description: "Allows you to group materials and audio clips to create hit sounds",
+        description: "Group materials and audio clips to create hit sounds",
         tutorial: 
         <>
           <p>- Import both downloaded scripts into your unity project.</p>
@@ -23,7 +23,7 @@ export function getScripts()
       },
       { url: "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/SpeedZone.cs", 
         name: "SpeedZone", 
-        description: "Allows you to make an object that changes the speed of the player when you walk into it",
+        description: "Make an object that changes the speed of the player when you walk into it",
         tutorial: 
         <>
           <p>- Import the downloaded script into your unity project.</p>
@@ -44,8 +44,8 @@ export function getTuts()
   return(
     [
       { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
-        name: "Reflection Probes", 
-        description: "Shows how to create and use reflection probes",
+        name: "ReflectionProbes", 
+        description: "How to create and use reflection probes",
         tutorial: 
         <>
           <h1>General info:</h1>
@@ -88,8 +88,8 @@ export function getTuts()
         </>
       },
       { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
-        name: "Light Probes", 
-        description: "Shows you how to create and use light probes",
+        name: "LightProbes", 
+        description: "How to create and use light probes",
         tutorial: 
         <>
           <h1>General info:</h1>
@@ -116,7 +116,7 @@ export function getTuts()
       },
       { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
       name: "URP", 
-      description: "Shows you how to get and use the Universal Render Pipeline",
+      description: "How to get and use the Universal Render Pipeline",
       tutorial: 
       <>
         <h1>General info:</h1>
