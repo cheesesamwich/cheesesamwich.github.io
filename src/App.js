@@ -49,6 +49,48 @@ let tuts = [
       <h3>Example</h3>
       <img src='https://cdn.discordapp.com/avatars/361575984639770625/0370221e38b7113d687003cd2a873180.webp'></img>
     </>
+  },
+  { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
+    name: "Reflection Probes", 
+    description: "Shows how to create and use reflection probes",
+    tutorial: 
+    <>
+      <h1>Creation:</h1>
+      <p>- To create a probe, right click in the hierarchy, go to light, then refletion probe.</p>
+      <h3>Example</h3>
+      <img src='https://files.catbox.moe/rmnqxp.png'></img>
+      <p>- Reflection probes have a cube area that the reflections will affect. If the cube is as big as a room, the reflections will only show on objects in the room.</p>
+      <h3>Example</h3>
+      <img src='https://files.catbox.moe/kwirmq.png'></img>
+      <p>- Once your probe is set up, you can either manually bake it by pressing bake, or have it bake automatically the next time you bake lights.</p>
+      <p>- When the probe is baked, it will show the finished reflections when selected.</p>
+      <h3>Example</h3>
+      <img src='https://files.catbox.moe/pedn5q.png'></img>
+      <p>- Any smooth/metallic object inside of the area will have the reflections applied.</p>
+      <h1>Settings:</h1>
+      <p>- TYPE is how the reflections will be made. Realtime makes the probe create reflections every frame update. Baked allows you to have the probe create a reflection using your computer's hardware.</p>
+      <p><i>Normally, you'll never want to use realtime reflection probes. Baked removes any and all performance issues reflections can cause.</i></p>
+      <p>- IMPORTANCE is how the game will choose which probe to use over others.</p>
+      <p><i>For example, the game would use a probe with the priority of 2 over one with the priority of 1.</i></p>
+      <p>- INTENSITY is how much the probe will show on smooth/metallic objects.</p>
+      <p>- BOX PROJECTION just changes the way the reflections show up on objects. Typically this should be on.</p>
+      <p>- BLEND DISTANCE is the distance (in meters) that the reflection will fade into view on objects.</p>
+      <p><i>For example, a blend distance of 0 would make the reflections appear instantly upon entering the area.</i></p>
+      <p>- BOX SIZE defines how large the area of effect is.</p>
+      <p>- RESOLUTION is how high quality the reflections will be. Typically you'll want this to be very low.</p>
+      <p><i>Due to how reflections are rendered, high quality reflections will use more power, but wont look much different. 128x128 is the best option for most occasions.</i></p>
+      <p>- HDR decides if the reflections will be rendered in a higher color range.</p>
+      <p><i>Using HDR really depends on your project. If you're going for more realistic graphics, you'll want this on. However, it can cause some very minor performance impacts.</i></p>
+      <p>- SHADOW DISTANCE defines how far away shadows will be rendered. This doesn't affect performance unless you're using realtime rendering.</p>
+      <p><i>This shouldn't be set to anything higher than 100, as it will majorly increase bake and/or render times.</i></p>
+      <p>- CLEAR FLAGS is what will be rendered as the "background" of sorts.</p>
+      <p>- BACKGROUND COLOR is only used if clear flags is set to "Solid Color."</p>
+      <p>- CULLING MASK defines what will be rendered in the reflection. All included layers are rendered, while the others are not.</p>
+      <p>- OCCLUSION CULLING decides if the reflections will take occlusion into account.</p>
+      <p><i>This setting only really matters if you're using realtime probes.</i></p>
+      <p>- CLIPPING PLANES define how far/close an object must be before being cut out of the render.</p>
+      <p><i>For example, if you have a building 1000 meters away, and the FAR clipping plane is set to 100, the building won't be rendered.</i></p>
+    </>
   }
 ];
 function App() {
