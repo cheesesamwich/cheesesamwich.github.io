@@ -33,13 +33,15 @@ function App() {
     }
   };
 
+  let gotInfo = getElementFromName(infoPage);
+
   return (
     <div className="container">
       <Helmet>
-        <title>SamSam{infoPage != null ? ` - ${getElementFromName(infoPage).name}` : ""}</title>
+        <title>SamSam{gotInfo != null ? ` - ${gotInfo.name}` : ""}</title>
         <meta
           name="description"
-          content={infoPage != null ? getElementFromName(infoPage).description : "The best place for all of your fan game needs"}
+          content={gotInfo!= null ? gotInfo.description : "The best place for all of your fan game needs"}
         />
       </Helmet>
       <header className="header">
@@ -53,7 +55,7 @@ function App() {
           </>
         }
         {!infoPage && <><h1>SamSam</h1> <h3 id='subHeader'>The best place for all of your fan game needs</h3></>} 
-        {infoPage &&  <h1 id='infoHeader'>{infoPage} instructions</h1>}
+        {getElementFromName(infoPage) !== undefined &&  <h1 id='infoHeader'>{infoPage} instructions</h1>}
       </header>
       {!infoPage && 
         <>
