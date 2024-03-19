@@ -31,6 +31,13 @@ function App() {
 
   return (
     <div className="container">
+      <Helmet>
+        <title>SamSam</title>
+        <meta
+          name="description"
+          content={infoPage != null ? infoPage : "The best place for all of your fan game needs"}
+        />
+      </Helmet>
       <header className="header">
         {infoPage &&
           <>
@@ -77,13 +84,6 @@ function ScriptInfo(props) {
   if (infoElement) {
     return (
       <div>
-        <Helmet>
-          <meta
-            name="description"
-            content={infoElement.description}
-          />
-          <title>SamSam | {infoElement.name}</title>
-        </Helmet>
         <div>
           {infoElement.tutorial}
         </div>
