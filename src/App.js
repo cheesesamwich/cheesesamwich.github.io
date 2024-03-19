@@ -53,7 +53,7 @@ function App() {
               <label className="btn" htmlFor="tutButton" onClick={() => handleSwitch("tutButton")}>Tutorials</label>
             </div>
             <div id='inputWrapper'>
-              <input id='searchBar' placeholder='Search for a script!' onChange={(e) => setSearchTerm(e.target.value)}></input>
+              <input id='searchBar' placeholder='Search for something!' onChange={(e) => setSearchTerm(e.target.value)}></input>
             </div>
             <div className="script-tiles">
                 <ScriptTiles searchTerm={searchTerm} videos={isScriptSearch ? scripts : tuts} download={isScriptSearch}/>
@@ -78,11 +78,11 @@ function ScriptInfo(props) {
     return (
       <div>
         <Helmet>
-        <meta
-          name="description"
-          content={infoElement.description}
-        />
-        <title>SamSam | {infoElement.name}</title>
+          <meta
+            name="description"
+            content={infoElement.description}
+          />
+          <title>SamSam | {infoElement.name}</title>
         </Helmet>
         <div>
           {infoElement.tutorial}
