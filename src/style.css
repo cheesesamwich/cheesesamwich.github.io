@@ -8,6 +8,7 @@
     --buttonCol: #594d9a;
     --italicCol: #b9a8ff;
     --placeholderCol: #e0e0e0;
+    --warning: #e43d3d;
 }
 
 body {
@@ -252,4 +253,11 @@ body
 #tutButton {
     position: absolute;
     left: -9999px;
+}
+
+
+.warning
+{
+    color: var(--warning);
+    font-style: italic;
 }

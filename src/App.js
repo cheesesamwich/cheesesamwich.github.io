@@ -56,7 +56,7 @@ let tuts = [
     tutorial: 
     <>
       <h1>Creation:</h1>
-      <p>- To create a probe, right click in the hierarchy, go to light, then refletion probe.</p>
+      <p>- To create a probe, right click in the hierarchy, go to light, then reflection probe.</p>
       <h3>Example</h3>
       <img src='https://files.catbox.moe/rmnqxp.png'></img>
       <p>- Reflection probes have a cube area that the reflections will affect. If the cube is as big as a room, the reflections will only show on objects in the room.</p>
@@ -69,7 +69,7 @@ let tuts = [
       <p>- Any smooth/metallic object inside of the area will have the reflections applied.</p>
       <h1>Settings:</h1>
       <p>- TYPE is how the reflections will be made. Realtime makes the probe create reflections every frame update. Baked allows you to have the probe create a reflection using your computer's hardware.</p>
-      <i><p style={{color: "red"}}>NEVER use realtime with any standalone VR game. Baked reflections should never impact performance.</p></i>
+      <p className='warning'>NEVER use realtime with any standalone VR game. Baked reflections should never impact performance.</p>
       <p>- IMPORTANCE is how the game will choose which probe to use over others.</p>
       <p><i>For example, the game would use a probe with the priority of 2 over one with the priority of 1.</i></p>
       <p>- INTENSITY is how much the probe will show on smooth/metallic objects.</p>
