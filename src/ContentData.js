@@ -45,11 +45,12 @@ export function getTuts()
     [
       { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
         name: "ReflectionProbes", 
+        id: "reflectionprobe",
         description: "How to create and use reflection probes",
         tutorial: 
         <>
           <h1>General info:</h1>
-          <p>Reflection probes sample the area around it and create a reflection cubemap, then apply the reflections to smooth objects without the performance cost of real reflections.</p>
+          <p>Reflection probes sample the area around it and create a reflection cubemap, then apply the reflections to smooth objects without the performance cost of real reflections. A max of two probes can affect a single object at once.</p>
           <h1>Creation:</h1>
           <p>- To create a probe, right click in the hierarchy, go to light, then reflection probe.</p>
           <h3>Example of menu</h3>
@@ -62,7 +63,9 @@ export function getTuts()
           <h3>Example example of baked probe</h3>
           <img src='https://files.catbox.moe/pedn5q.png'></img>
           <p>- Any smooth/metallic object inside of the area will have the reflections applied.</p>
+          <p><i>Can't see the probe? Make sure gizmos are ON, and reflection probes aren't off in the menu.</i></p>
           <h1>Settings:</h1>
+          <p>- SIZE & PROBE ORIGIN are the two buttons at the top. Size allows you to edit the size of the bounding box in the scene, and the other moves the probe in the box, rather than making an offset.</p>
           <p>- TYPE is how the reflections will be made. Realtime makes the probe create reflections every frame update. Baked allows you to have the probe create a reflection using your computer's hardware.</p>
           <p className='warning'>NEVER use realtime with any standalone VR game. Baked reflections should never impact performance.</p>
           <p>- IMPORTANCE is how the game will choose which probe to use over others.</p>
@@ -88,7 +91,8 @@ export function getTuts()
         </>
       },
       { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
-        name: "LightProbes", 
+        name: "Light Probes", 
+        id: "lightprobe",
         description: "How to create and use light probes",
         tutorial: 
         <>
@@ -116,6 +120,7 @@ export function getTuts()
       },
       { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
       name: "URP", 
+      id: "urp",
       description: "How to get and use the Universal Render Pipeline",
       tutorial: 
       <>
@@ -168,6 +173,31 @@ export function getTuts()
         <p className='warning'>Soft shadows on realtime lights can cause lag</p>
         <p>- Quality (of the soft shadows) determines how high quality the soft shadows are rendered. Low-Medium.</p>
         <p className='warning'>High quality soft shadows can cause lag</p>
+      </>
+    },
+    { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
+      name: "Audio Reverb Zones", 
+      id: "reverb",
+      description: "How to create and use audio reverb zones",
+      tutorial: 
+      <>
+        <h1>General info:</h1>
+        <p>Audio reverb zones allow for audio to be edited to reverberate in a certain area.</p>
+        <h1>Creation:</h1>
+        <p>- To create a new audio reverb zone, right click in the hierarchy, go to audio, then audio reverb zone.</p>
+        <h3>Example of menu</h3>
+        <img src='https://files.catbox.moe/d70j90.png'></img>
+        <p>- Once created, you should see two wireframe circles. These are the minimum and maximum distance ranges.</p>
+        <p><i>Don't see anything? Make sure gizmos are enabled, and that audio reverb zones are enabled in the menu.</i></p>
+        <p>- Adjust the min range to fill your whole room, and the max to be a medium size circle in the center of the room.</p>
+        <h3>Example of a well placed audio reverb zone</h3>
+        <img src='https://files.catbox.moe/td6kp0.png'></img>
+        <p>- Once your zone is scaled to the right size, you're pretty much done!</p>
+        <p>- Select a reverb profile in the object properties. All of them have pretty self-explanitory names.</p>
+        <h1>Settings:</h1>
+        <p>- MINDISTANCE chooses how close someone must be to have audio affected by the zone.</p>
+        <p>- MAXDISTANCE chooses how close someone must be to have audio fully edited.</p>
+        <p>- REVERBPRESET is a list of pre-made reverb profiles for you to easily use.</p>
       </>
     }
     ]
