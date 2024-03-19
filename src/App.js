@@ -8,7 +8,8 @@ const tuts = getTuts();
 
 function getElementFromName(name)
 {
-  return scripts.concat(tuts).find(video => video.name === name);
+  if(name == null | undefined) { return null; }
+  return scripts.concat(tuts).find(video => video.name.toLowerCase() === name.toLowerCase());
 }
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -34,14 +35,26 @@ function App() {
   };
 
   let gotInfo = getElementFromName(infoPage);
+  let isInfoGood = gotInfo !== undefined | null;
+
+  let safeInfo = isInfoGood ? gotInfo : null;
+
+  let safeDescription, safeName;
+  if (safeInfo !== null && safeInfo !== undefined) {
+    safeDescription = safeInfo.safeDescription;
+    safeName = safeInfo.safeName;
+  } else {
+    safeDescription = "";
+    safeName = "";
+  }
 
   return (
     <div className="container">
       <Helmet>
-        <title>SamSam{gotInfo != null ? ` - ${gotInfo.name}` : ""}</title>
+        <title>SamSam{gotInfo != null ? ` - ${safeName}` : ""}</title>
         <meta
           name="description"
-          content={gotInfo!= null ? gotInfo.description : "The best place for all of your fan game needs"}
+          content={gotInfo!= null ? safeDescription : "The best place for all of your fan game needs"}
         />
       </Helmet>
       <header className="header">
@@ -54,8 +67,8 @@ function App() {
             </a>  
           </>
         }
-        {!infoPage && <><h1>SamSam</h1> <h3 id='subHeader'>The best place for all of your fan game needs</h3></>} 
-        {getElementFromName(infoPage) !== undefined &&  <h1 id='infoHeader'>{infoPage} instructions</h1>}
+        {!gotInfo && <><h1>SamSam</h1> <h3 id='subHeader'>The best place for all of your fan game needs</h3></>} 
+        {gotInfo &&  <h1 id='infoHeader'>{safeName} instructions</h1>}
       </header>
       {!infoPage && 
         <>
@@ -99,8 +112,7 @@ function ScriptInfo(props) {
     return (
       <>
         <h1>404</h1>
-        <br/>
-        <p>Are you lost?</p>
+        <p>U good?</p>
       </>
     );
   }
