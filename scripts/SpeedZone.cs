@@ -15,10 +15,12 @@ public class SpeedZone : MonoBehaviour
         originalPlayerSpeed = player.jumpMultiplier;
     }
 
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider other)
     {
+        if(!other.GetComponentInParent<GorillaLocomotion.Player>()) { return; }
         player.jumpMultiplier = playerSpeed;
     }
+
     void OnTriggerExit()
     {
         player.jumpMultiplier = originalPlayerSpeed;
