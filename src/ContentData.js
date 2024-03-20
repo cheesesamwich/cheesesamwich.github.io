@@ -52,6 +52,7 @@ export function getTuts()
         tutorial: 
         <>
           <h1>General info:</h1>
+          <p className='warning'>This tutorial assumes you are using URP in your project.</p>
           <p>Reflection probes sample the area around it and create a reflection cubemap, then apply the reflections to smooth objects without the performance cost of real reflections. A max of two probes can affect a single object at once.</p>
           <h1>Creation:</h1>
           <p>- To create a probe, right click in the hierarchy, go to light, then reflection probe.</p>
@@ -99,6 +100,7 @@ export function getTuts()
         tutorial: 
         <>
           <h1>General info:</h1>
+          <p className='warning'>This tutorial assumes you are using URP in your project.</p>
           <p>Light probes sample lighting data from baked lights, then apply the data to non-static objects without the performance cost of realtime lighting.</p>
           <h1>Creation:</h1>
           <p>- To create a probe group, right click in the hierarchy, go to light, then light probe group.</p>
@@ -200,6 +202,58 @@ export function getTuts()
         <p>- MINDISTANCE chooses how close someone must be to have audio affected by the zone.</p>
         <p>- MAXDISTANCE chooses how close someone must be to have audio fully edited.</p>
         <p>- REVERBPRESET is a list of pre-made reverb profiles for you to easily use.</p>
+      </>
+    },
+    { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
+      name: "Lighting Settings", 
+      id: "lighting",
+      description: "How to create and set up lighting settings",
+      tutorial: 
+      <>
+        <h1>General info:</h1>
+        <p className='warning'>This tutorial assumes you are using URP in your project.</p>
+        <p>Audio reverb zones allow for audio to be edited to reverberate in a certain area.</p>
+        <h1>Creation:</h1>
+        <p>- To create new lighting settings, right click in the asset menu, go to create, then lighting settings.</p>
+        <h3>Example of menu</h3>
+        <img src='https://files.catbox.moe/icotjv.png'></img>
+        <p>- To use the settings, go to window, rendering, then lighting.</p>
+        <h3>Example of menu</h3>
+        <img src='https://files.catbox.moe/8ym6yk.png'></img>
+        <p>- That should open a menu where you can input lighting settings and edit them, as well as bake lighting.</p>
+        <p>- From here, just drag your new lighting settings into the box at the top of the menu.</p>
+        <h3>Example of menu</h3>
+        <img src='https://files.catbox.moe/731g06.png'></img>
+        <h1>Settings:</h1>
+        <p><i>Each setting will have a short description, then a recommended value shortly after.</i></p>
+        <p><i>For reference, this is the lighting I use.</i></p>
+        <img src='https://files.catbox.moe/7i52bq.png'></img>
+        <p>- REALTIME SETTINGS are all, shockingly, related to realtime lighting. For VR purposes, you should generally avoid having too many realtime lights. In any case, all of these should be OFF.</p>
+        <p>- BAKED GLOBAL ILLUMINATION makes the engine take everything into account when baking. Makes the game look much better, at the cost of increased bake times. ON.</p>
+        <p>- LIGHTING MODE defines how the engine will bake shadows, and sometimes overall lighting. Shadowmask works for most cases.</p>
+        <p>- LIGHTMAPPER defines what the engine will use to bake the lights. Set to CPU by default, but not recommended.</p>
+        <p>- PROGRESSIVE UPDATES allows you to watch the baking in real time via baking whats directly in front of your screen before everything else. Really pointless, majorly increases bake times. OFF.</p>
+        <p>- IMPORTANCE SAMPLING decides if the engine will sample every lights 'Importance' setting. ON.</p>
+        <p>- DIRECT SAMPLES is the number of samples the lightmapper will use to calculate direct lighting. 64-256 depending on how long you're willing to wait.</p>
+        <p>- INDIRECT SAMPLES is the number of samples the lightmapper will use to calculate indirect lighting. 512.</p>
+        <p>- ENVIRONMENT SAMPLES is the number of samples the lightmapper will use to calculate environment lighting. 256.</p>
+        <p>- LIGHT PROBE SAMPLE MULTIPLIER is the number the lightmapper will multiply the sample count by for light probe calculations. 2-3.</p>
+        <p><i>Higher values will take longer to bake, but give higher quality probe lighting.</i></p>
+        <p>- MAX BOUNCES is the max number of bounces used to calculate indirect lighting. Should never need to be higher than 2.</p>
+        <p>- FILTERING decides what algorithm the lightmapper will use for denoising. Auto.</p>
+        <p>- LIGHTMAP RESOLUTION is the resolution (in textels) of the bake per object. 20-40, depending on how long you're willing to wait.</p>
+        <p><i>Higher values will take longer to bake, but give higher quality lighting.</i></p>
+        <p>- LIGHTMAP PADDING is the number of textels that each object will be separated from eachother to avoid light bleeding. 1-2.</p>
+        <p>- MAX LIGHTMAP SIZE is how large (in pixels) each lightmap can be. 256x256 for testing, 1024/2048 for build.</p>
+        <p><i>Higher values will take longer to bake, and have larger file sizes, but give higher quality lighting.</i></p>
+        <p>- LIGHTMAP COMPRESSION defines how much the lightmapper will compress lighting once finished. LOW would make the file size much smaller, but might leave artifacts. HIGH.</p>
+        <p>- AMBIENT OCCLUSION defines if ambient occlusion will be used when baking. ON.</p>
+        <p>- MAX DISTANCE decides how long the max ray distance will be while baking. 1-2.</p>
+        <p>- INDIRECT AND DIRECT CONTRIBUTION define how much those two lighting types are taken into account during calculations. Should always be 0-1</p>
+        <p>- DIRECTIONAL MODE affects how directional lights are treated. Meta requires this to be non-directional.</p>
+        <p>- ALBEDO BOOST defines how much color will affect bouncing light while baking. 1.</p>
+        <p>- INDIRECT INTENSITY controls the brightness of baked indirect light. 1. </p>
+        <p>- LIGHTMAP PARAMETERS are the overall quality settings of your lighting. Can really be anything, but Default-Medium works best (in my opinion).</p>
       </>
     }
     ]
