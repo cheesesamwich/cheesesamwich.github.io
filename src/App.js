@@ -122,7 +122,7 @@ function ScriptTiles({ searchTerm, videos, download }) {
         key={index}
         scriptName={element.name}
         scriptDescription={element.description}
-        scriptUrl={element.url}
+        scriptUrl={`https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/${element.url}`}
         tutorial={element.tutorial}
         videos={videos}
         download={download}

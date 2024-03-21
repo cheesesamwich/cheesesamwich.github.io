@@ -2,7 +2,7 @@ export function getScripts()
 {
   return(
     [
-      { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
+      { url: ["HitSounds.cs", "HitSoundTrigger.cs"], 
         name: "Hit Sounds", 
         id: "hitsounds",
         description: "Group materials and audio clips to create hit sounds",
@@ -17,12 +17,11 @@ export function getScripts()
           <p>- Drag in the materials you want to associate into the "Materials" List</p>
           <p>- Drag all audio clips into the "Sounds" list.</p>
           <p><i>The script supports random audio, so you can upload as many audio clips as you want for variation.</i></p>
-          <p>You're good to go!</p>
           <h3>Example</h3>
           <img src='https://files.catbox.moe/at5wds.webp'></img>
         </>
       },
-      { url: "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/SpeedZone.cs", 
+      { url: "SpeedZone.cs", 
         name: "Speed Zone", 
         id: "speed",
         description: "Make an object that changes the speed of the player when you walk into it",
@@ -34,7 +33,22 @@ export function getScripts()
           <p>- Make sure the objects collider is set to "isTrigger"</p>
           <p>- Add the SpeedZone script to the object.</p>
           <p>- Set the "playerSpeed" variable on the script to the speed of the player when in the object. (1.2 is the gorillaPlayer default)</p>
-          <p>You're good to go!</p>
+        </>
+      },
+      { url: "NetworkedObjectToggle.cs", 
+        name: "Networked Object Toggle", 
+        id: "toggle",
+        description: "Make a button that toggles an object for all players",
+        tutorial: 
+        <>
+          <p>- Import the downloaded script into your unity project.</p>
+          <p><i>Make sure your hand colliders are set up correctly. There will be a tutorial for this in the future, but for now you're on your own.</i></p>
+          <p>- Put the NetworkedObjectToggle script on the object you want to act as the "button"</p>
+          <p>- Set the "Toggle Mode" to whatever you want.</p>
+          <p><i>"Invert toggle" inverts the objects state (off = on, on = off). "Set true" enables the object, and vice versa with "Set false".</i></p>
+          <p>- Configure the "Hand Tag Nam" variable to be the same as whatever your hand collider object is tagged as.</p>
+          <p><i>"Work When Offline" Determines if the button will work even when not in a photon server</i></p>
+          <p className="warning">Do not change the "Rpc Target" variable unless you know what you are doing. If you don't, it is best left as what it is.</p>
         </>
       }
     ]
@@ -45,8 +59,7 @@ export function getTuts()
 {
   return(
     [
-      { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
-        name: "Reflection Probes", 
+      { name: "Reflection Probes", 
         id: "reflection",
         description: "How to create and use reflection probes",
         tutorial: 
@@ -93,8 +106,7 @@ export function getTuts()
           <p><i>For example, if you have a building 1000 meters away, and the FAR clipping plane is set to 100, the building won't be rendered.</i></p>
         </>
       },
-      { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
-        name: "Light Probes", 
+      { name: "Light Probes", 
         id: "lightprobe",
         description: "How to create and use light probes",
         tutorial: 
@@ -122,65 +134,63 @@ export function getTuts()
           <p>- REMOVE RINGING affects objects under intense lighting. Reduces artifacting when on, at the loss of some contrast.</p>
         </>
       },
-      { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
-      name: "URP", 
-      id: "urp",
-      description: "How to get and use the Universal Render Pipeline",
-      tutorial: 
-      <>
-        <h1>General info:</h1>
-        <p>URP is a render pipeline optimized for mobile/VR. It allows for better overall performance, while also looking better.</p>
-        <h1>Obtaining:</h1>
-        <p>- To add URP to your project, open Window/Package Manager and import "Universal RP."</p>
-        <h3>Example of menu</h3>
-        <img src='https://files.catbox.moe/b4m1aj.png'></img>
-        <p>- Once added, you might need to change your renderer in the graphics settings.</p>
-        <p>- Right click in your assets menu, and create a new "URP Asset"</p>
-        <p><i>A second file should be created automatically when you create the first.</i></p>
-        <h3>Example of menu </h3>
-        <img src='https://files.catbox.moe/tgbvh6.png'></img>
-        <p>- Head to your project settings, then to graphics. Change out your current (or blank) render pipeline asset with the one you just created.</p>
-        <h3>Example of settings </h3>
-        <img src='https://files.catbox.moe/c70lqs.png'></img>
-        <p>- Once the pipeline is changed, Unity might need to restart. After that, every material should be solid pink.</p>
-        <p className='warning'>Don't panic! This is just part of the process.</p>
-        <h3>Example of pink (broken) materials</h3>
-        <img src='https://files.catbox.moe/osrfdq.png'></img>
-        <p>- To fix all of your materials, head to the assets tab again, and to the left side select "All Materials"</p>
-        <h3>Example of menu</h3>
-        <img src='https://files.catbox.moe/vmhn62.png'></img>
-        <p>- Select every material made by you, then go to Edit/Rendering/Materials/Convert Selected Built-in Materials to URP.</p>
-        <h3>Example of menu</h3>
-        <img src='https://files.catbox.moe/erqtl4.png'></img>
-        <h1>Render Settings:</h1>
-        <p className='warning'>By default, URP will lag on most VR devices. This is due to the render settings.</p>
-        <p>Rather than explaining every setting, I'll go over each important one briefly and say whether or not it should be enabled, and what value it should be. If you want more info, I highly recommend watching Fist Full Of Shimp's 7 video playlist on URP optimization.</p>
-        <p>- For reference, these are great settings for most VR devices.</p>
-        <img src='https://files.catbox.moe/0palaz.png'></img>
-        <p className='warning'>These may not be suitable for the Quest 1 or any device worse than it.</p>
-        <p>- Depth texture enables depth testing in shaders. ON.</p>
-        <p>- Opaque texture enables opaques in shaders. ON.</p>
-        <p>- HDR allows colors to have a higher color range, at a very slight performance cost. ON.</p>
-        <p>- Anti aliasing removes artifacting around the edges of objects, making the viewing experience less harsh. ON, 2x.</p>
-        <p className='warning'>High values can cause performance issues.</p>
-        <p>- Render scale decides how large the game will be rendered at. Lowering this value drastically increases performance, but looks HORRIBLE. 1.</p>
-        <p className='warning'>Higher values than 1 will cause performance issues.</p>
-        <p>- Main light chooses how the "sun" of your game will be rendered. Per pixel.</p>
-        <p>- Cast shadows chooses if shadows will be rendered. ON.</p>
-        <p>- Shadow resolutio defines the quality of the shadows. 1024x1024.</p>
-        <p className='warning'>High values can cause performance issues.</p>
-        <p>- Additional lights decides how every light OTHER THAN the sun will be rendered. Per pixel.</p>
-        <p>- Reflection probes - Probe blending. ON. Box projection. ON.</p>
-        <p>- Max distance defines how far away shadows will be rendered. 50-100.</p>
-        <p className='warning'>Higher values can cause performance issues.</p>
-        <p>- Soft shadows determines if lights can have soft shadows. ON.</p>
-        <p className='warning'>Soft shadows on realtime lights can cause lag</p>
-        <p>- Quality (of the soft shadows) determines how high quality the soft shadows are rendered. Low-Medium.</p>
-        <p className='warning'>High quality soft shadows can cause lag</p>
-      </>
+      { name: "URP", 
+        id: "urp",
+        description: "How to get and use the Universal Render Pipeline",
+        tutorial: 
+        <>
+          <h1>General info:</h1>
+          <p>URP is a render pipeline optimized for mobile/VR. It allows for better overall performance, while also looking better.</p>
+          <h1>Obtaining:</h1>
+          <p>- To add URP to your project, open Window/Package Manager and import "Universal RP."</p>
+          <h3>Example of menu</h3>
+          <img src='https://files.catbox.moe/b4m1aj.png'></img>
+          <p>- Once added, you might need to change your renderer in the graphics settings.</p>
+          <p>- Right click in your assets menu, and create a new "URP Asset"</p>
+          <p><i>A second file should be created automatically when you create the first.</i></p>
+          <h3>Example of menu </h3>
+          <img src='https://files.catbox.moe/tgbvh6.png'></img>
+          <p>- Head to your project settings, then to graphics. Change out your current (or blank) render pipeline asset with the one you just created.</p>
+          <h3>Example of settings </h3>
+          <img src='https://files.catbox.moe/c70lqs.png'></img>
+          <p>- Once the pipeline is changed, Unity might need to restart. After that, every material should be solid pink.</p>
+          <p className='warning'>Don't panic! This is just part of the process.</p>
+          <h3>Example of pink (broken) materials</h3>
+          <img src='https://files.catbox.moe/osrfdq.png'></img>
+          <p>- To fix all of your materials, head to the assets tab again, and to the left side select "All Materials"</p>
+          <h3>Example of menu</h3>
+          <img src='https://files.catbox.moe/vmhn62.png'></img>
+          <p>- Select every material made by you, then go to Edit/Rendering/Materials/Convert Selected Built-in Materials to URP.</p>
+          <h3>Example of menu</h3>
+          <img src='https://files.catbox.moe/erqtl4.png'></img>
+          <h1>Render Settings:</h1>
+          <p className='warning'>By default, URP will lag on most VR devices. This is due to the render settings.</p>
+          <p>Rather than explaining every setting, I'll go over each important one briefly and say whether or not it should be enabled, and what value it should be. If you want more info, I highly recommend watching Fist Full Of Shimp's 7 video playlist on URP optimization.</p>
+          <p>- For reference, these are great settings for most VR devices.</p>
+          <img src='https://files.catbox.moe/0palaz.png'></img>
+          <p className='warning'>These may not be suitable for the Quest 1 or any device worse than it.</p>
+          <p>- Depth texture enables depth testing in shaders. ON.</p>
+          <p>- Opaque texture enables opaques in shaders. ON.</p>
+          <p>- HDR allows colors to have a higher color range, at a very slight performance cost. ON.</p>
+          <p>- Anti aliasing removes artifacting around the edges of objects, making the viewing experience less harsh. ON, 2x.</p>
+          <p className='warning'>High values can cause performance issues.</p>
+          <p>- Render scale decides how large the game will be rendered at. Lowering this value drastically increases performance, but looks HORRIBLE. 1.</p>
+          <p className='warning'>Higher values than 1 will cause performance issues.</p>
+          <p>- Main light chooses how the "sun" of your game will be rendered. Per pixel.</p>
+          <p>- Cast shadows chooses if shadows will be rendered. ON.</p>
+          <p>- Shadow resolutio defines the quality of the shadows. 1024x1024.</p>
+          <p className='warning'>High values can cause performance issues.</p>
+          <p>- Additional lights decides how every light OTHER THAN the sun will be rendered. Per pixel.</p>
+          <p>- Reflection probes - Probe blending. ON. Box projection. ON.</p>
+          <p>- Max distance defines how far away shadows will be rendered. 50-100.</p>
+          <p className='warning'>Higher values can cause performance issues.</p>
+          <p>- Soft shadows determines if lights can have soft shadows. ON.</p>
+          <p className='warning'>Soft shadows on realtime lights can cause lag</p>
+          <p>- Quality (of the soft shadows) determines how high quality the soft shadows are rendered. Low-Medium.</p>
+          <p className='warning'>High quality soft shadows can cause lag</p>
+        </>
     },
-    { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
-      name: "Audio Reverb Zone", 
+    { name: "Audio Reverb Zone", 
       id: "reverb",
       description: "How to create and use audio reverb zones",
       tutorial: 
@@ -204,8 +214,7 @@ export function getTuts()
         <p>- REVERBPRESET is a list of pre-made reverb profiles for you to easily use.</p>
       </>
     },
-    { url: ["https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSounds.cs", "https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/HitSoundTrigger.cs"], 
-      name: "Lighting Settings", 
+    { name: "Lighting Settings", 
       id: "lighting",
       description: "How to create and set up lighting settings",
       tutorial: 
