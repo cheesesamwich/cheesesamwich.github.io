@@ -46,7 +46,7 @@ export function getScripts()
           <p>- Put the NetworkedObjectToggle script on the object you want to act as the "button"</p>
           <p>- Set the "Toggle Mode" to whatever you want.</p>
           <p><i>"Invert toggle" inverts the objects state (off = on, on = off). "Set true" enables the object, and vice versa with "Set false".</i></p>
-          <p>- Configure the "Hand Tag Nam" variable to be the same as whatever your hand collider object is tagged as.</p>
+          <p>- Configure the "Hand Tag Name" variable to be the same as whatever your hand collider object is tagged as.</p>
           <p><i>"Work When Offline" Determines if the button will work even when not in a photon server</i></p>
           <p className="warning">Do not change the "Rpc Target" variable unless you know what you are doing. If you don't, it is best left as what it is.</p>
         </>

@@ -122,7 +122,7 @@ function ScriptTiles({ searchTerm, videos, download }) {
         key={index}
         scriptName={element.name}
         scriptDescription={element.description}
-        scriptUrl={`https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/${element.url}`}
+        scriptUrl={element.url}
         tutorial={element.tutorial}
         videos={videos}
         download={download}
@@ -133,7 +133,10 @@ function ScriptTiles({ searchTerm, videos, download }) {
   return tiles;
 }
 
-async function DownloadScript(url) {
+async function DownloadScript(urlId) {
+
+    let url = `https://raw.githubusercontent.com/cheesesamwich/cheesesamwich.github.io/main/scripts/${urlId}`;
+
     const response = await fetch(url);
     const data = await response.blob();
 
