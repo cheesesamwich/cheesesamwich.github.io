@@ -50,6 +50,33 @@ export function getScripts()
           <p><i>"Work When Offline" Determines if the button will work even when not in a photon server</i></p>
           <p className="warning">Do not change the "Rpc Target" variable unless you know what you are doing. If you don't, it is best left as what it is.</p>
         </>
+      },
+      { url: ["ElevatorButton.cs"], 
+        name: "Elevator", 
+        id: "elevator",
+        description: "Press a button to trigger a two way animation",
+        tutorial: 
+        <>
+          <p>- Import the downloaded script into your unity project.</p>
+          <p>- Add the script to the object that will act as your button.</p>
+          <p><i>Make sure the button has a collider set to isTrigger!</i></p>
+          <h3>Example</h3>
+          <img src='https://files.catbox.moe/qu5zrh.png'></img>
+          <p>- Create two different animations; One of the elevator going up, and another going down.</p>
+          <p>- Drag the animator on your elevator object into the "animator" variable.</p>
+          <p>- Set make both animations transition from "Any State."</p>
+          <p><i>Make sure loop time is FALSE, and in debug mode make wrap mode "Clamp Forever" on BOTH animations!!!!</i></p>
+          <p>- Make a new animation state and set it to the default state.</p>
+          <h3>Example</h3>
+          <img src='https://files.catbox.moe/qxr6tj.png'></img>
+          <p>- Create two trigger states, one for up, and one for down.</p>
+          <p>- Set the transitions to use the corresponding triggers.</p>
+          <h3>Example</h3>
+          <img src='https://files.catbox.moe/iedkh7.png'></img>
+          <p><i>Make sure the trigger names match with the trigger name values in the script!!</i></p>
+          <p>- Set the handTag value to either your hand collision tag OR your finger collision tag.</p>
+          <p>- If the elevator starts at the top, set the "IsUp" bool to true.</p>
+        </>
       }
     ]
   )
