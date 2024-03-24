@@ -51,7 +51,7 @@ export function getScripts()
           <p className="warning">Do not change the "Rpc Target" variable unless you know what you are doing. If you don't, it is best left as what it is.</p>
         </>
       },
-      { url: ["ElevatorButton.cs"], 
+      { url: "ElevatorButton.cs", 
         name: "Elevator", 
         id: "elevator",
         description: "Press a button to trigger a two way animation",
