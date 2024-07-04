@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root
+{
+  --base: #1e1e2e;
+  --surface0: #313244;
+  --text: #cdd6f4;
+  --subtext1: #a6adc8;
+  --mantle: #181825;
+  --mauve: #cba6f7;
+  --crust: #11111b;
+}
+
+.IntroBlur
+{
+  backdrop-filter: blur(500px);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+}
+
+.IntroButton {
+  animation: sweepIn 0.5s ease-out forwards;
+}
+
+@keyframes sweepIn {
+  0% {
+    transform: translateY(100%);
+    /*opacity: 0;*/
+  }
+  100% {
+    transform: translateY(0);
+    /*opacity: 1;*/
+  }
+}
+
+.IntroFadeOut
+{
+  animation: introFadeOut 0.5s ease-out forwards;
+}
+
+@keyframes introFadeOut
+{
+  0%
+  {
+    opacity: 1;
+  }
+  100%
+  {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.CenterDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+html, body{
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  color: var(--text);
+  font-family: "Poppins";
+  background-color: var(--crust);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://sadan.zip/assets/snow.gif');
+  background-repeat: repeat;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.CenterModal {
+  background-color: var(--mantle);
+  color: var(--subtext1);
+  width: 90vh;
+  height: fit-content;
+  padding: 1vh;
+  border-radius: 30px;
+  text-align: left;
+  /*holy shit dont ask*/
+  padding-left: 5vh;
+  padding: 4vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  z-index: 1;
+  a
+  {
+    color: var(--mauve);
+    text-decoration: none;
+  }
+}
+
+.ButtonBar
+{
+  margin-top: 1vh;
+  width: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+  height: 60px;
+  border-radius: 100px;
+  justify-content: center;
+  display: flex;
+}
+
+.IconCircle
+{
+  background-color: var(--mantle);
+  color: var(--subtext1);
+  margin-top: 1vh;
+  height: 60px;
+  width: 60px;
+  border-radius: 100px;
+}
+
+.IconLink
+{
+  height: 6vh;
+  fill: var(--text) !important;
+}
+
+.Content
+{
+  z-index: 1;
+}
