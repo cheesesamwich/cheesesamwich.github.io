@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import lofiSong from "./assets/lofi.mp3";
+
+//hosted on github now
+const lofiSong = "https://github.com/cheesesamwich/cheesesamwich.github.io/raw/main/src/assets/lofi.mp3";
 
 function IconLink(props)
 {
