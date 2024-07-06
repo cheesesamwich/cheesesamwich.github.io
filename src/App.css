@@ -9,6 +9,7 @@
   --mantle: #181825;
   --mauve: #cba6f7;
   --crust: #11111b;
+  --lavender: #b4befe;
 }
 
 .IntroBlur
@@ -99,14 +100,13 @@ body::before {
   color: var(--subtext1);
   width: 90vh;
   height: fit-content;
-  padding: 1vh;
   border-radius: 30px;
   text-align: left;
   /*holy shit dont ask*/
-  padding-left: 5vh;
-  padding: 4vh;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
+  padding-left: 3vh;
+  padding-right: 3vh;
+  padding-top: 0.002vh;
+  padding-bottom: 2vh;
   z-index: 1;
   a
   {
@@ -117,23 +117,20 @@ body::before {
 
 .ButtonBar
 {
-  margin-top: 1vh;
-  width: 50vh;
-  margin-left: auto;
-  margin-right: auto;
+  width: fit-content;
   height: 60px;
   border-radius: 100px;
   justify-content: center;
   display: flex;
 }
 
+
 .IconCircle
 {
   background-color: var(--mantle);
   color: var(--subtext1);
   margin-top: 1vh;
-  height: 6vh;
-  width: 6vh;
+  height: 7.5vh;
   border-radius: 100px;
 }
 
@@ -146,4 +143,44 @@ body::before {
 .Content
 {
   z-index: 1;
+}
+
+/*RATIOS ARE FUCKED*/
+.IndicatorBars {
+  margin-top: 1vh;
+  width: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+  height: 30px;
+  border-radius: 100px;
+  background-color: var(--mantle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.ScrollChip {
+  background-color: var(--surface0);
+  height: 20px;
+  margin: 10px;
+  border-radius: 100px;
+  flex: 1;
+  min-width: 0; 
+}
+
+.ScrollChipHighlight
+{
+  background-color: var(--lavender);
+}
+
+.UserIcon
+{
+  border-radius: 7.5vh;
+  height: 7.5vh;
+  margin: 0.5vh;
+}
+
+.FriendsParent
+{
+  
 }
