@@ -9,10 +9,11 @@ function GetSong()
   [
     "lofi1.mp3",
     "lofi2.mp3",
-    "lofi3.mp3"
+    "lofi3.mp3",
+    "lofi4.mp3"
   ];
   
-  return `https://github.com/cheesesamwich/cheesesamwich.github.io/raw/main/src/assets/${songs[Math.floor(Math.random() * 3)]}`
+  return `https://github.com/cheesesamwich/cheesesamwich.github.io/raw/main/src/assets/${songs[Math.floor(Math.random() * songs.length)]}`
 }
 
 function IconLink(props)
