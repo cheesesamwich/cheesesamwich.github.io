@@ -2,7 +2,18 @@ import { useState, useEffect } from 'react';
 import './App.css';
 
 //hosted on github now
-const lofiSong = "https://github.com/cheesesamwich/cheesesamwich.github.io/raw/main/src/assets/lofi.mp3";
+
+function GetSong()
+{
+  const songs = 
+  [
+    "lofi1.mp3",
+    "lofi2.mp3",
+    "lofi3.mp3"
+  ];
+  
+  return `https://github.com/cheesesamwich/cheesesamwich.github.io/raw/main/src/assets/${songs[Math.floor(Math.random() * 3)]}`
+}
 
 function IconLink(props)
 {
@@ -17,12 +28,14 @@ function IconLink(props)
   )
 }
 
+const songChoice = GetSong();
+
 function App() {
   const [hasEntered, setHasEntered] = useState(false);
 
   //slightly cursed, but the audio has a stroke and replays a ton of times otherwise
   useEffect(() => {
-    let audioElement = new Audio(lofiSong);
+    let audioElement = new Audio(songChoice);
     audioElement.volume = 0.05;
 
     if (hasEntered) {
