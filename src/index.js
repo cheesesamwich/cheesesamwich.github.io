@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import { App } from "./App.tsx";
 
 function Route()
@@ -17,7 +17,7 @@ const subRoutes = {
 };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+root.render (
   <React.StrictMode>
     <Route/>
   </React.StrictMode>
