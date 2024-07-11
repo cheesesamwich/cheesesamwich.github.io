@@ -1,4 +1,12 @@
-import { Person } from "./App";
+export const bulletPoint = "•";
+
+export interface Person
+{
+  pfp: string;
+  url: string;
+  //unused right now but might be useful
+  name?: string;
+}
 
 export const sociallinks = 
 [

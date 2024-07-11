@@ -90,7 +90,7 @@ body::before {
   opacity: 0.5;
 }
 
-.App {
+.MainApp {
   display: flex;
   justify-content: center;
   align-items: center;

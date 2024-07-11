@@ -1,7 +1,7 @@
 {
   "name": "samsite",
   "version": "0.1.0",
-  "homepage": "https://cheesesamwich.github.io",
+  "homepage": "https://samwich.dev",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -11,6 +11,7 @@
     "@types/react-dom": "^18.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.24.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -19,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && echo \"samwich.dev\" > ./build/CNAME",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
