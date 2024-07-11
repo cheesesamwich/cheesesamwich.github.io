@@ -1,11 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-<<<<<<< Updated upstream
 import { friends, artists, sociallinks } from './constants';
 import { LinkList, UserIcon } from './components';
-=======
-//hosted on github now
->>>>>>> Stashed changes
 
 function GetSong()
 {
@@ -126,6 +122,7 @@ function App() {
 
   return (
     <div className="App" style={{ userSelect: "none" }}>
+
       <div className={`IntroBlur CenterDiv ${hasEntered ? "IntroFadeOut" : ""}`}>
         <div className="IntroButton">
           <h1 style={{ cursor: "pointer" }}>Enable music?</h1>
