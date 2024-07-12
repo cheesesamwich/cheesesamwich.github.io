@@ -1,24 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { App } from "./App.tsx";
 
-function Route()
-{
-  const currentLocation = new URL(window.location.href).pathname.substring(1);
-  if(subRoutes[currentLocation])
-  {
-    return subRoutes[currentLocation]();
-  }
-  return <App/>;
-}
-
 const subRoutes = {
-    "rupert": () => <img src={"https://samwich.dev/assets/rupert.jpg"}/>,
+    "rupert": () => <img src={"https://samwich.dev/assets/rupert.jpg"} alt="rupert" />,
 };
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render (
-  <React.StrictMode>
-    <Route/>
-  </React.StrictMode>
+ReactDOM.render(
+  <BrowserRouter>
+    <React.StrictMode>
+      <Routes>
+        {Object.entries(subRoutes).map(([key]) => (
+          <Route key={key} path={`/${key}`} element={subRoutes[key]()} />
+        ))}
+        <Route path="/" element={<App />} />
+      </Routes>
+    </React.StrictMode>
+  </BrowserRouter>,
+  document.getElementById('root')
 );
