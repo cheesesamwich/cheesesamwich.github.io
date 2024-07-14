@@ -13,58 +13,7 @@
   --surface2: #585b70;
 }
 
-.IntroBlur
-{
-  backdrop-filter: blur(500px);
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 5;
-  color: var(--subtext1);
-}
-
-.IntroButton {
-  animation: sweepIn 0.5s ease-out forwards;
-}
-
-@keyframes sweepIn {
-  0% {
-    transform: translateY(100%);
-    /*opacity: 0;*/
-  }
-  100% {
-    transform: translateY(0);
-    /*opacity: 1;*/
-  }
-}
-
-.IntroFadeOut
-{
-  animation: introFadeOut 0.5s ease-out forwards;
-}
-
-@keyframes introFadeOut
-{
-  0%
-  {
-    opacity: 1;
-  }
-  100%
-  {
-    opacity: 0;
-    display: none;
-  }
-}
-
-.CenterDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-
-html, body{
+html:has(.MainApp), body:has(.MainApp){
   height: 100%;
   margin: 0;
   display: flex;
@@ -76,7 +25,7 @@ html, body{
   background-color: var(--crust);
 }
 
-body::before {
+body:has(.MainApp)::before {
   content: "";
   position: fixed;
   top: 0;
@@ -96,126 +45,179 @@ body::before {
   align-items: center;
   height: 100%;
   width: 100%;
-}
 
-.CenterModal {
-  background-color: var(--mantle);
-  color: var(--subtext1);
-  width: 90vh;
-  height: fit-content;
-  border-radius: 30px;
-  text-align: left;
-  /*holy shit dont ask*/
-  padding-left: 3vh;
-  padding-right: 3vh;
-  padding-top: 0.002vh;
-  padding-bottom: 2vh;
-  z-index: 1;
-  a
+  .CenterModal 
   {
-    color: var(--mauve);
-    text-decoration: none;
+    background-color: var(--mantle);
+    color: var(--subtext1);
+    width: 90vh;
+    height: fit-content;
+    border-radius: 30px;
+    text-align: left;
+    /*holy shit dont ask*/
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 0.002vh;
+    padding-bottom: 2vh;
+    z-index: 1;
+    a
+    {
+      color: var(--mauve);
+      text-decoration: none;
+    }
   }
-}
 
-.ButtonBar
-{
-  width: fit-content;
-  height: 60px;
-  border-radius: 100px;
-  justify-content: center;
-  display: flex;
-}
-
-
-.IconCircle
-{
-  background-color: var(--mantle);
-  color: var(--subtext1);
-  margin-top: 1vh;
-  height: 7.5vh;
-  border-radius: 100px;
-}
-
-.IconLink
-{
-  height: 6vh;
-  fill: var(--text) !important;
-}
-
-.Content
-{
-  z-index: 1;
-}
-
-/*ratios are slightly screwed*/
-.IndicatorBars {
-  margin-top: 1vh;
-  width: 80vh;
-  margin-left: auto;
-  margin-right: auto;
-  height: 30px;
-  border-radius: 100px;
-  background-color: var(--mantle);
-  display: flex;
-  justify-content: space-between;
-  align-items: center; 
-}
-
-.ScrollChip {
-  background-color: var(--surface0);
-  height: 20px;
-  margin: 10px;
-  border-radius: 100px;
-  flex: 1;
-  min-width: 0; 
-}
-
-.ScrollChipHighlight
-{
-  background-color: var(--lavender);
-}
-
-.UserIcon
-{
-  border-radius: 7.5vh;
-  height: 7.5vh;
-  margin: 0.5vh;
-}
-
-.ScrollHint
-{
-  text-align: center;
-  animation: scrollBob 1.5s ease-in-out infinite;
-  opacity: 0.5;
-}
-
-@keyframes scrollBob
-{
-  0%
+  .IntroBlur
   {
-    transform: translateY(0);
+    backdrop-filter: blur(500px);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    color: var(--subtext1);
   }
-  50%
-  {
-    transform: translateY(2px);
-  }
-  100%
-  {
-    transform: translateY(0);
-  }
-}
 
-.MusicPrompt
-{
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  margin-left: auto;
-  margin-right: auto;
-  gap: 5vh;
-  *
+  .IntroButton {
+    animation: sweepIn 0.5s ease-out forwards;
+  }
+
+  @keyframes sweepIn {
+    0% {
+      transform: translateY(100%);
+      /*opacity: 0;*/
+    }
+    100% {
+      transform: translateY(0);
+      /*opacity: 1;*/
+    }
+  }
+
+  .IntroFadeOut
   {
-    cursor: pointer;
+    animation: introFadeOut 0.5s ease-out forwards;
+  }
+
+  @keyframes introFadeOut
+  {
+    0%
+    {
+      opacity: 1;
+    }
+    100%
+    {
+      opacity: 0;
+      display: none;
+    }
+  }
+
+  .CenterDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  
+  .ButtonBar
+  {
+    width: fit-content;
+    height: 60px;
+    border-radius: 100px;
+    justify-content: center;
+    display: flex;
+  }
+  
+  
+  .IconCircle
+  {
+    background-color: var(--mantle);
+    color: var(--subtext1);
+    margin-top: 1vh;
+    height: 7.5vh;
+    border-radius: 100px;
+  }
+  
+  .IconLink
+  {
+    height: 6vh;
+    fill: var(--text) !important;
+  }
+  
+  .Content
+  {
+    z-index: 1;
+  }
+  
+  /*ratios are slightly screwed*/
+  .IndicatorBars {
+    margin-top: 1vh;
+    width: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+    border-radius: 100px;
+    background-color: var(--mantle);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+  }
+  
+  .ScrollChip {
+    background-color: var(--surface0);
+    height: 20px;
+    margin: 10px;
+    border-radius: 100px;
+    flex: 1;
+    min-width: 0; 
+  }
+  
+  .ScrollChipHighlight
+  {
+    background-color: var(--lavender);
+  }
+  
+  .UserIcon
+  {
+    border-radius: 7.5vh;
+    height: 7.5vh;
+    margin: 0.5vh;
+  }
+  
+  .ScrollHint
+  {
+    text-align: center;
+    animation: scrollBob 1.5s ease-in-out infinite;
+    opacity: 0.5;
+  }
+  
+  @keyframes scrollBob
+  {
+    0%
+    {
+      transform: translateY(0);
+    }
+    50%
+    {
+      transform: translateY(2px);
+    }
+    100%
+    {
+      transform: translateY(0);
+    }
+  }
+  
+  .MusicPrompt
+  {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-left: auto;
+    margin-right: auto;
+    gap: 5vh;
+    *
+    {
+      cursor: pointer;
+    }
   }
 }
