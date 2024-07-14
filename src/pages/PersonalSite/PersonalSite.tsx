@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import './App.css';
-import { friends, artists, sociallinks, bulletPoint } from './constants';
+import './PersonalSite.css';
+import { friends, artists, sociallinks, bulletPoint } from '../../constants';
 
-import { UserIcon } from './components/UserIcon';
-import { TitleList } from './components/TitleList';
-import { LinkList } from './components/LinkList';
-import { ScrollBar } from './components/ScrollBar';
-import { Hyperlink } from './components/HyperLink';
+import { UserIcon } from '../../components/UserIcon';
+import { TitleList } from '../../components/TitleList';
+import { LinkList } from '../../components/LinkList';
+import { ScrollBar } from '../../components/ScrollBar';
+import { Hyperlink } from '../../components/HyperLink';
 
 function isMobileDevice() {
   return ['iphone', 'android', 'webos', 'ipad', 'ipod', 'blackberry', 'windows phone'].some(keyword => navigator.userAgent.toLowerCase().includes(keyword))
@@ -15,7 +15,7 @@ function isMobileDevice() {
   ;
 }
 
-export function App() {
+export function PersonalSite() {
   const [scroll, setScroll] = useState(0);
 
   const ScrollSections = 
@@ -25,7 +25,7 @@ export function App() {
       <h2>
         I'm Samwich, but you can call me Sam.
         I like programming, gaming, and a bunch of other stuff i can't cram into this bio :P
-        I have a vencord fork called <a href='https://github.com/cheesesamwich/Tobleronecord' target='_blank' rel="noreferrer">tobleronecord</a> that i maintain with my dumb plugins,
+        I have a vencord fork called <a href='https://samwich.dev/toblerone' target='_blank' rel="noreferrer">tobleronecord</a> that i maintain with my dumb plugins,
         as well as some more random projects that pique my interest. You might find me in programming or game development communities, so if you do, say hi!!
       </h2>
     </>,
