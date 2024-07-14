@@ -25,7 +25,7 @@ export function App() {
       <h2>
         I'm Samwich, but you can call me Sam.
         I like programming, gaming, and a bunch of other stuff i can't cram into this bio :P
-        I have a vencord fork called <a href='https://github.com/cheesesamwich/Tobleronecord' target='_blank'>tobleronecord</a> that i maintain with my dumb plugins,
+        I have a vencord fork called <a href='https://github.com/cheesesamwich/Tobleronecord' target='_blank' rel="noreferrer">tobleronecord</a> that i maintain with my dumb plugins,
         as well as some more random projects that pique my interest. You might find me in programming or game development communities, so if you do, say hi!!
       </h2>
     </>,

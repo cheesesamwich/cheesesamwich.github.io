@@ -11,7 +11,7 @@ export function LinkList(props)
       {
         links.map((e, index) => 
           <>
-            <a href={e.url} target="_blank"><h2>{e.name}</h2></a>
+            <a href={e.url} target="_blank" rel="noreferrer"><h2>{e.name}</h2></a>
             {/*genius or insane? someone tell me please*/}
             <h2>{index != (0 | links.length - 1) ? bulletPoint : ""}</h2>
           </>
