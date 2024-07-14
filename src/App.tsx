@@ -1,7 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './App.css';
 import { friends, artists, sociallinks, bulletPoint } from './constants';
-import { Hyperlink, LinkList, ScrollBar, TitleList, UserIcon } from './components';
+
+import { UserIcon } from './components/UserIcon';
+import { TitleList } from './components/TitleList';
+import { LinkList } from './components/LinkList';
+import { ScrollBar } from './components/ScrollBar';
+import { Hyperlink } from './components/HyperLink';
 
 function isMobileDevice() {
   return ['iphone', 'android', 'webos', 'ipad', 'ipod', 'blackberry', 'windows phone'].some(keyword => navigator.userAgent.toLowerCase().includes(keyword))
