@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import './PersonalSite.css';
-import { friends, artists, sociallinks, bulletPoint } from '../../constants';
+import './App.css';
+import { friends, artists, sociallinks, bulletPoint } from './constants';
 
-import { UserIcon } from '../../components/UserIcon';
-import { TitleList } from '../../components/TitleList';
-import { LinkList } from '../../components/LinkList';
-import { ScrollBar } from '../../components/ScrollBar';
-import { Hyperlink } from '../../components/HyperLink';
+import { UserIcon } from './components/UserIcon';
+import { TitleList } from './components/TitleList';
+import { LinkList } from './components/LinkList';
+import { ScrollBar } from './components/ScrollBar';
+import { Hyperlink } from './components/HyperLink';
 
 function isMobileDevice() {
   return ['iphone', 'android', 'webos', 'ipad', 'ipod', 'blackberry', 'windows phone'].some(keyword => navigator.userAgent.toLowerCase().includes(keyword))
@@ -15,7 +15,7 @@ function isMobileDevice() {
   ;
 }
 
-export function PersonalSite() {
+export function App() {
   const [scroll, setScroll] = useState(0);
 
   const ScrollSections = 

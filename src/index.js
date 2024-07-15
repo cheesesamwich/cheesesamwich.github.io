@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { PersonalSite } from "./pages/PersonalSite/PersonalSite";
-import { Tobleronecord } from "./pages/Tobleronecord/Tobleronecord"
+import { App } from "./App";
+
 const subRoutes = {
     "rupert": () => <img src={"https://samwich.dev/assets/rupert.jpg"} alt="rupert" />,
-    "toblerone": () => <Tobleronecord/>
 };
 
 ReactDOM.render(
@@ -15,7 +14,7 @@ ReactDOM.render(
         {Object.entries(subRoutes).map(([key]) => (
           <Route key={key} path={`/${key}`} element={subRoutes[key]()} />
         ))}
-        <Route path="/" element={<PersonalSite/>} />
+        <Route path="/" element={<App />} />
       </Routes>
     </React.StrictMode>
   </BrowserRouter>,
