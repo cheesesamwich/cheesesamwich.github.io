@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { App, CatSection } from "./App";
 import { useAwaiter } from './utils/useAwaiter';
+import { Helmet } from 'react-helmet';
 
 function CatImage()
 {
@@ -14,7 +15,16 @@ function CatImage()
     setCat(response[0].url);
   });
   return (
-    <img src={cat ?? ""} style={{width: "50vh", height: "50vh", objectFit: "cover"}}/>
+    <>
+      <Helmet>
+        <title>Cat</title>
+        <meta property="og:title" content={"Look at that cat"} />
+        <meta property="og:description" content={"What a nice cat"} />
+        <meta property="og:url" content={cat} />
+        <meta property="og:image" content={cat} />
+      </Helmet>
+      <img src={cat ?? ""} style={{width: "50vh", height: "50vh", objectFit: "cover"}}/>
+    </>
   )
 }
 //just memes, i will probably use this at some point
