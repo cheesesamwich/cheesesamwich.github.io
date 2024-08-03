@@ -15,6 +15,15 @@ function CatImage()
     setCat(response[0].url);
   });
   return (
+    <img src={cat ?? ""} style={{width: "50vh", height: "50vh", objectFit: "cover"}}/>
+
+  )
+}
+//just memes, i will probably use this at some point
+const subRoutes = {
+    "rupert": () => <img src={"https://samwich.dev/assets/rupert.jpg"}/>,
+    "appl": () => <img src={"https://samwich.dev/assets/appl.png"}/>,
+    "cat": () => 
     <>
       <Helmet>
         <title>Cat</title>
@@ -23,15 +32,8 @@ function CatImage()
         <meta property="og:url" content={cat} />
         <meta property="og:image" content={cat} />
       </Helmet>
-      <img src={cat ?? ""} style={{width: "50vh", height: "50vh", objectFit: "cover"}}/>
+      <CatImage/>
     </>
-  )
-}
-//just memes, i will probably use this at some point
-const subRoutes = {
-    "rupert": () => <img src={"https://samwich.dev/assets/rupert.jpg"}/>,
-    "appl": () => <img src={"https://samwich.dev/assets/appl.png"}/>,
-    "cat": () => <CatImage/>
 };
 
 ReactDOM.render(
