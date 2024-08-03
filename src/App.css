@@ -206,18 +206,10 @@ body:has(.MainApp)::before {
       transform: translateY(0);
     }
   }
-  
-  .MusicPrompt
-  {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin-left: auto;
-    margin-right: auto;
-    gap: 5vh;
-    *
-    {
-      cursor: pointer;
-    }
-  }
+}
+
+.UserCollection
+{
+  display: flex;
+  flex-direction: row;
 }

@@ -4,7 +4,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { App } from "./App";
 
 const subRoutes = {
-    "rupert": () => <img src={"https://samwich.dev/assets/rupert.jpg"} alt="rupert" />,
+    "rupert": () => <img src={"https://samwich.dev/assets/rupert.jpg"}/>,
+    "appl": () => <img src={"https://samwich.dev/assets/appl.png"}/>
 };
 
 ReactDOM.render(

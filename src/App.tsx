@@ -31,11 +31,15 @@ export function App() {
     </>,
     <div className='FriendsParent'>
       <h1>Friends</h1>
-      {friends.map(e => <UserIcon {...e}/>)}
+      <div className='UserCollection'>
+        {friends.map(e => <UserIcon {...e}/>)}
+      </div>
     </div>,
     <div className='MusicParent'>
       <h1>Artists I Like</h1>
-      {artists.map(e => <UserIcon {...e}/>)}
+      <div className='UserCollection'>
+        {artists.map(e => <UserIcon {...e}/>)}
+      </div>
     </div>,
     <>
       <h1>Links</h1>
