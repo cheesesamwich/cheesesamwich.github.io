@@ -18,19 +18,11 @@ function isMobileDevice() {
 
 export function CatSection()
 {
-  const [cat, setCat] = useState("");
-  useAwaiter(async () => 
-  {
-    const response = await fetch("https://api.thecatapi.com/v1/images/search").then(e => e.json());
-
-    setCat(response[0].url);
-  });
-
   return (
     <>
       <h1>Cat Image</h1>
       <h2>There was space to fill, so have a cat</h2>
-      <img src={cat} className='catImage'/>
+      <img src={"https://cataas.com/cat"} className='catImage'/>
     </>
   )
 }
