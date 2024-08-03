@@ -70,6 +70,8 @@ export function App() {
         ]}/>
       </div>
     </>,
+    //NOBODY IS GOING TO HIRE ME BRO
+    /*
     <>
       <h1>Portfolio</h1>
       <TitleList data={
@@ -85,6 +87,7 @@ export function App() {
           }
         ]}/>
     </>
+    */
   ]
 
   if(isMobileDevice())
