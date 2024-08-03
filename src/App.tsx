@@ -7,12 +7,32 @@ import { TitleList } from './components/TitleList';
 import { LinkList } from './components/LinkList';
 import { ScrollBar } from './components/ScrollBar';
 import { Hyperlink } from './components/HyperLink';
+import { useAwaiter } from './utils/useAwaiter';
 
 function isMobileDevice() {
   return ['iphone', 'android', 'webos', 'ipad', 'ipod', 'blackberry', 'windows phone'].some(keyword => navigator.userAgent.toLowerCase().includes(keyword))
   ||
   window.innerWidth <= 800
   ;
+}
+
+export function CatSection()
+{
+  const [cat, setCat] = useState("");
+  useAwaiter(async () => 
+  {
+    const response = await fetch("https://api.thecatapi.com/v1/images/search").then(e => e.json());
+
+    setCat(response[0].url);
+  });
+
+  return (
+    <>
+      <h1>Cat Image</h1>
+      <h2>There was space to fill, so have a cat</h2>
+      <img src={cat} className='catImage'/>
+    </>
+  )
 }
 
 export function App() {
@@ -70,6 +90,7 @@ export function App() {
         ]}/>
       </div>
     </>,
+    <CatSection/>
     //NOBODY IS GOING TO HIRE ME BRO
     /*
     <>
