@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { friends, artists, sociallinks, bulletPoint } from './constants';
+import { coolPeople, sociallinks, bulletPoint } from './constants';
 
 import { UserIcon } from './components/UserIcon';
 import { TitleList } from './components/TitleList';
@@ -29,18 +29,21 @@ export function App() {
         as well as some more random projects that pique my interest. You might find me in programming or game development communities, so if you do, say hi!!
       </h2>
     </>,
-    <div className='FriendsParent'>
-      <h1>Friends</h1>
+    <div>
+      <h1>Cool People</h1>
       <div className='UserCollection'>
-        {friends.map(e => <UserIcon {...e}/>)}
+        {coolPeople.map(e => <UserIcon {...e}/>)}
       </div>
     </div>,
+    /*
+    //too stinky and takes 80 years to load
     <div className='MusicParent'>
       <h1>Artists I Like</h1>
       <div className='UserCollection'>
         {artists.map(e => <UserIcon {...e}/>)}
       </div>
     </div>,
+    */
     <>
       <h1>Links</h1>
       <div className='RaisedElevation'>

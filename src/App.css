@@ -33,7 +33,7 @@ body:has(.MainApp)::before {
   width: 100%;
   height: 100%;
   /*gotta move this over at some point*/
-  background-image: url('https://sadan.zip/assets/snow.gif');
+  background-image: url('https://samwich.dev/assets/snow.gif');
   background-repeat: repeat;
   z-index: 1;
   opacity: 0.5;
