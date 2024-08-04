@@ -3,8 +3,11 @@ import "./style.css";
 
 const flags =
 {
+    "Pride": ["#E40303", "#FF8C00", "#FFED00", "#008026", "#004CFF", "#732982"],
     "Lesbian": ["#d42c00", "#fe9955", "#ffffff", "#d261a3", "#a40061"],
     "Gay": ["#078d70", "#26ceaa", "#98e8c1", "#ffffff", "#7bade2", "#5049cc", "#3d1a78"],
+    "Bisexual": ["#D60270","#D60270", "#9B4F96", "#0038A8", "#0038A8"],
+    "Transgender": ["#5BCEFA", "#F5A9B8", "#FFFFFF", "#F5A9B8", "#5BCEFA"],
     "Finsexual": ["#a183cd", "#c5a3d0", "#e1bbd7", "#de92be", "#d773a6"],
     "Finromantic": ["#c290bd", "#d6acc2", "#e5c2cc", "#e49fa9", "#df8188"]
 };
@@ -72,7 +75,7 @@ export function Woke()
 
     return (
         <div className="Woke">
-            <div onClick={() => {setFlag(Object.keys(flags)[flag + 1] ? flag + 1 :  0)}}>
+            <div onClick={() => {setFlag((flag + 1) % Object.keys(flags).length)}}>
                 <h1 style={{textAlign: "center", userSelect: "none"}}>Wokeify your pfp<br/>{Object.keys(flags)[flag]}</h1>
             </div>
             <input 
