@@ -73,7 +73,7 @@ export function Woke()
     return (
         <div className="Woke">
             <div onClick={() => {setFlag(Object.keys(flags)[flag + 1] ? flag + 1 :  0)}}>
-                <h1 style={{textAlign: "center"}}>Wokeify your pfp<br/>{Object.keys(flags)[flag]}</h1>
+                <h1 style={{textAlign: "center", userSelect: "none"}}>Wokeify your pfp<br/>{Object.keys(flags)[flag]}</h1>
             </div>
             <input 
                 type="file" 
