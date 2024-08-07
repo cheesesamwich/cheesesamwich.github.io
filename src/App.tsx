@@ -36,9 +36,8 @@ export function App() {
       <h1>Hey!</h1>
       <h2>
         I'm Samwich, but you can call me Sam.
-        I like programming, gaming, and a bunch of other stuff i can't cram into this bio :P
-        I have a vencord fork called <a href='https://samwich.dev/toblerone' target='_blank' rel="noreferrer">tobleronecord</a> that i maintain with my dumb plugins,
-        as well as some more random projects that pique my interest. You might find me in programming or game development communities, so if you do, say hi!!
+        I like programming, gaming, and i have a bunch of random projects that pique my interest.
+        You might find me in programming or game development communities, so if you do, say hi!!
       </h2>
     </>,
     <div>

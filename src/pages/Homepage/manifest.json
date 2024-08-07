@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "3AM Chrome",
+  "description": "balls",
+  "version": "1.0",
+  "icons": {
+    "48": "moonicon.png",
+    "128": "moonicon.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": ["tabs"]
+}
