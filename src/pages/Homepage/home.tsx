@@ -5,7 +5,7 @@ const siteDictionary = {
     'GitHub': 'https://github.com',
     'YouTube': 'https://youtube.com',
     'Discord': 'https://discord.com',
-    'OpenAI': 'https://chat.openai.com',
+    'OpenAI': 'https://chatgpt.com/',
     'Spotify': 'https://open.spotify.com',
     'Proton': 'https://mail.proton.me/u/1/inbox',
     'Pinterest': 'https://www.pinterest.co.uk/',
